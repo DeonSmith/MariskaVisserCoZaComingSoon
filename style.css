@@ -1,0 +1,65 @@
+
+body, html {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+body .section {
+  opacity: 0;
+  max-height: 100vh;
+  overflow: hidden;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+}
+body .section:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: #fff1ce;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+body .section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  background: white;
+  background: linear-gradient(0deg, #3fbacf 0%, #7cd0de 35%, #fff 70%, #fff8e7 77%, #fff1ce 100%);
+  opacity: 1;
+  transform: scale(1);
+}
+body .columns.is-vcentered {
+  z-index: 1;
+  height: 100vh;
+}
+body .columns.is-vcentered .title {
+  margin-top: -10vh;
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeIn 2s ease-out  1s;
+  animation-fill-mode: forwards;
+}
+body .columns.is-vcentered .subtitle {
+  opacity: 0;
+  animation: fadeIn 2s ease-out 3s;
+  font-family: 'Caveat', cursive;
+  animation-fill-mode: forwards;
+  color: #777;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
