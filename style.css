@@ -63,3 +63,8 @@ body .columns.is-vcentered .subtitle {
     opacity: 1;
   }
 }
+@media (max-width: 768px) {
+  body .columns.is-vcentered .title { 
+    margin-top: 25vh;
+  }
+}
